@@ -6,7 +6,7 @@ pipeline {
         DOCKER_IMAGE = 'cithit/cit-intranet'                       
         IMAGE_TAG = "build-${BUILD_NUMBER}"
         GITHUB_URL = 'https://github.com/miamioh-cit/cit-intranet.git' 
-        KUBECONFIG = credentials('roseaw-225')                           
+        KUBECONFIG = credentials('cit-department')                           
     }
 
     stages {
