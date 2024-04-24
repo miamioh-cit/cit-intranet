@@ -30,47 +30,4 @@ input, textarea, select {
     padding: 1px 0 1px 3px;
     background: url(images/png-bg.png) left top;
     border: 1px solid #d6d6d6;
-    color: #414141;
-}
-
-#contacts-form textarea {
-    width: 539px;
-    height: 252px;
-    margin-bottom: 15px;
-    overflow: auto;
-}
-
-/* Navigation */
-.site-nav {
-    width: 100%;
-    overflow: hidden;
-    padding-top: 15px;
-}
-
-.site-nav li {
-    float: left;
-    font-weight: bold;
-    padding: 0 73px 4px 73px;
-}
-
-.site-nav li a {
-    color: #000;
-}
-
-.site-nav li a:hover,
-.site-nav li a.act {
-    color: #4c7cbd;
-}
-
-/* Footer */
-#footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    border-top: 1px solid #d5d5d5;
-    font-size: 0.8em;
-    color: #414141;
-}
+    color: 
