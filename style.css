@@ -1,33 +1,15 @@
-/* Reset */
-* { margin: 0; padding: 0; }
-
-/* Body */
 body {
-    background: url(images/tail-top.gif) repeat-x top #fff;
-    font: 100%/1 Tahoma, Geneva, sans-serif;
-    color: #414141;
+    background-color: #ffffff; /* White background */
+    margin: 0;
+    padding: 0;
 }
 
-/* Forms */
-input, textarea, select {
-    font: 1em Tahoma, Geneva, sans-serif;
-}
-
-#contacts-form {
+.footer {
+    background-color: #333333; /* Dark gray footer */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    overflow: hidden;
 }
-
-#contacts-form label {
-    width: 97px;
-    line-height: 18px;
-    font-weight: bold;
-    color: #4c7cbd;
-}
-
-#contacts-form input, #contacts-form textarea {
-    width: 170px;
-    padding: 1px 0 1px 3px;
-    background: url(images/png-bg.png) left top;
-    border: 1px solid #d6d6d6;
-    color: 
