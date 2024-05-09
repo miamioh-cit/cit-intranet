@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: cithit/cit-intranet:latest                      
+        image: cithit/cit-intranet:latest # this is pulling from dockerhub                     
         ports:
         - containerPort: 80  # Expose NGINX on port 80      
 ---
