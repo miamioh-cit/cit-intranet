@@ -41,7 +41,7 @@ metadata:
   name: prod-service
 spec:
   type: LoadBalancer 
-  loadBalancerIP: 10.48.10.183                                   
+  loadBalancerIP: 10.48.229.201                                   
   ports:
   - protocol: TCP
     port: 80
