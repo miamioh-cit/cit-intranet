@@ -3,7 +3,7 @@
     const picker = document.querySelector('.theme-picker');
     const select = picker.querySelector('select');
     const readTheme = () => {
-        try { const saved = localStorage.getItem('cet-theme'); return ['light', 'dark'].includes(saved) ? saved : 'system'; } catch (_) { return 'system'; }
+        try { const saved = localStorage.getItem('cet-theme'); return ['light', 'dark', 'system'].includes(saved) ? saved : 'light'; } catch (_) { return 'light'; }
     };
     let preference = readTheme();
     const applyTheme = () => {
