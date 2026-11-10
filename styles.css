@@ -51,7 +51,8 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-blue); o
     background: linear-gradient(135deg, #b71835, #8e1029);
     color: #ffffff;
 }
-:root[data-theme="dark"] .admin-badge { background: #213451; border-color: #59678c; }
+.admin-badge { background: #eaf1ff; border-color: #abc5ef; color: #174b96; }
+:root[data-theme="dark"] .admin-badge { background: #213451; border-color: #5279b5; color: #a8caff; }
 :root[data-theme="dark"] .section-badge { background: #382236; border-color: #7d3f57; }
 @media (max-width: 768px) { .header-content { padding-left: 1rem; padding-right: 1rem; } .theme-picker { flex-shrink: 0; } .header-links .theme-picker { margin-left: 0; } }
 @media (max-width: 440px) { .header-content { flex-wrap: wrap; } .logo { width: 56px; height: 63px; } .header-links { flex-wrap: wrap; justify-content: center; } }
