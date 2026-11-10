@@ -1,0 +1,62 @@
+/* Keep the original portal layout and colorful icons; add Polytechnic branding. */
+:root { color-scheme: light; --polytechnic-blue: #051f55; }
+header { background: var(--bg-card); border-bottom-color: var(--miami-red); box-shadow: 0 2px 0 var(--polytechnic-blue); }
+.header-content { gap: 1rem; }
+.logo-section { gap: .875rem; }
+.logo { width: 64px; height: 72px; object-fit: contain; flex-shrink: 0; background: white; border-radius: 0; box-shadow: none; }
+[hidden] { display: none !important; }
+.page-title { background: none; -webkit-text-fill-color: currentColor; color: var(--polytechnic-blue); }
+.section-title { color: var(--polytechnic-blue); }
+.card::before { opacity: 1; height: 2px; background: linear-gradient(90deg, var(--miami-red) 0% 55%, var(--polytechnic-blue) 55%); }
+.card:hover { border-color: var(--accent-blue); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 4px; }
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --polytechnic-blue: #8eb8ff;
+    --miami-red: #ff8299;
+    --miami-dark-red: #e95072;
+    --bg-primary: #0b1426;
+    --bg-secondary: #14213a;
+    --bg-card: #14213a;
+    --bg-card-hover: #1b2c49;
+    --text-primary: #eef3fc;
+    --text-secondary: #b3c0d4;
+    --border-color: #334563;
+    --accent-blue: #8eb8ff;
+    --accent-green: #6de0c1;
+    --accent-purple: #c8a6ff;
+    --accent-orange: #ffd28a;
+}
+:root[data-theme="dark"] header { border-bottom-color: #e3294c; box-shadow: 0 2px 0 #467bc8; }
+:root[data-theme="dark"] .hero { background: linear-gradient(135deg, #14213a, #1c2340); }
+:root[data-theme="dark"] .hero-title { background: linear-gradient(135deg, #a9caff, #ff8299); -webkit-background-clip: text; background-clip: text; }
+/* Complementary hues for night mode; preserve the original icon artwork. */
+:root[data-theme="dark"] .card-icon.red { background: linear-gradient(135deg, #71e5e0, #3bbfc9); color: #082a37; }
+:root[data-theme="dark"] .card-icon.orange { background: linear-gradient(135deg, #94b4ff, #6f8ee8); color: #102344; }
+:root[data-theme="dark"] .card-icon.green { background: linear-gradient(135deg, #f3a3cf, #dc7db6); color: #39142c; }
+:root[data-theme="dark"] .card-icon.blue { background: linear-gradient(135deg, #ffd395, #edb66b); color: #38240c; }
+:root[data-theme="dark"] .card-icon.purple, :root[data-theme="dark"] .admin-icon { background: linear-gradient(135deg, #d4ec9b, #aed27b); color: #253710; }
+:root[data-theme="dark"] .admin-badge { background: #213451; border-color: #59678c; }
+:root[data-theme="dark"] .section-badge { background: #382236; border-color: #7d3f57; }
+@media (max-width: 768px) { .header-content { padding-left: 1rem; padding-right: 1rem; } .theme-picker { flex-shrink: 0; } .header-links .theme-picker { margin-left: 0; } }
+@media (max-width: 440px) { .header-content { flex-wrap: wrap; } .logo { width: 56px; height: 63px; } .header-links { flex-wrap: wrap; justify-content: center; } }
+@media (prefers-reduced-motion: reduce) { .card, .admin-card { animation: none; transition: none; } }
+
+.theme-picker { margin-left: auto; display: inline-flex; align-items: center; gap: .5rem; color: var(--polytechnic-blue); font-size: .75rem; }
+.theme-picker select { padding: .45rem .6rem; min-height: 36px; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-card); color: var(--text-primary); font: inherit; cursor: pointer; }
+select:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 3px; }
+.tool-item { position: relative; min-width: 0; }
+.tool-item > a { display: block; height: 100%; }
+.tool-item .card, .tool-item .admin-card { height: 100%; }
+.favorite-button { position: absolute; top: 9px; right: 9px; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid transparent; border-radius: 6px; background: var(--bg-card); color: var(--text-secondary); font-size: 24px; line-height: 1; cursor: pointer; }
+.favorite-button:hover { border-color: var(--accent-blue); background: var(--bg-card-hover); }
+.favorite-button[aria-pressed="true"] { color: var(--miami-red); }
+.favorites-section { margin-top: 1.25rem; margin-bottom: 1.5rem; }
+.favorites-section .section-header { margin-bottom: .75rem; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 768px) { .header-links .theme-picker { margin-left: 0; } }
+
+header h1 { font-size: 1.25rem; font-weight: 650; line-height: 1.3; color: var(--polytechnic-blue); }
+header .subtitle { font-size: .8125rem; margin-top: .2rem; }
+.logo-section { min-width: 0; }
+@media (max-width: 440px) { header h1 { font-size: 1rem; } }

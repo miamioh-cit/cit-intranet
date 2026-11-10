@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="color-scheme" content="light dark">
+    <script src="theme.js"></script>
+    <script src="portal.js" defer></script>
     <style>
         :root {
             --miami-red: #C3142D;
@@ -343,17 +346,19 @@
         .card:nth-child(5), .admin-card:nth-child(5) { animation-delay: 0.25s; }
         .card:nth-child(6), .admin-card:nth-child(6) { animation-delay: 0.3s; }
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <div class="logo">M</div>
+                <img class="logo" src="images/miami-polytechnic.png" alt="Miami University Polytechnic" width="256" height="285">
                 <div>
-                    <h1>cet-intranet</h1>
-                    <div class="subtitle">Miami University Regionals/Polytechnic</div>
+                    <h1>Miami University Polytechnic</h1>
+                    <div class="subtitle">cet-intranet</div>
                 </div>
             </div>
+            <label class="theme-picker" hidden><span>Theme</span><select aria-label="Theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
         </div>
     </header>
 
@@ -365,10 +370,10 @@
         <section class="section">
             <div class="section-header">
                 <h3 class="section-title">Development Tools</h3>
-                <span class="section-badge">6 Resources</span>
+                <span class="section-badge">7 Resources</span>
             </div>
             <div class="card-grid">
-                <a href="http://backstage.cit.regionals.miamioh.edu" target="_blank">
+                <a href="http://backstage.cit.regionals.miamioh.edu" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon red">⭐</div>
                         <h4 class="card-title">CET Infrastructure Portal</h4>
@@ -377,7 +382,7 @@
                     </div>
                 </a>
 
-                <a href="http://jenkins-225.cit.regionals.miamioh.edu:8080" target="_blank">
+                <a href="http://jenkins-225.cit.regionals.miamioh.edu:8080" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon orange">J</div>
                         <h4 class="card-title">Jenkins Dev (225)</h4>
@@ -386,7 +391,7 @@
                     </div>
                 </a>
 
-                <a href="http://rancher-prod.cit.regionals.miamioh.edu" target="_blank">
+                <a href="http://rancher-prod.cit.regionals.miamioh.edu" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon green">R</div>
                         <h4 class="card-title">Rancher Dev (225)</h4>
@@ -395,7 +400,7 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/GNS3/gns3-gui/releases/tag/v2.2.61" target="_blank">
+                <a href="https://github.com/GNS3/gns3-gui/releases/tag/v2.2.61" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon blue">GN</div>
                         <h4 class="card-title">GNS3 Client</h4>
@@ -404,7 +409,7 @@
                     </div>
                 </a>
 
-                <a href="https://azureforeducation.microsoft.com/devtools" target="_blank">
+                <a href="https://azureforeducation.microsoft.com/devtools" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon blue">MS</div>
                         <h4 class="card-title">Microsoft Software</h4>
@@ -413,7 +418,7 @@
                     </div>
                 </a>
 
-                <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion" target="_blank">
+                <a href="https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon purple">VM</div>
                         <h4 class="card-title">VMware Fusion & Workstation</h4>
@@ -422,7 +427,7 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/miamioh-cit" target="_blank">
+                <a href="https://github.com/miamioh-cit" target="_blank" rel="noopener noreferrer">
                     <div class="card">
                         <div class="card-icon purple">GH</div>
                         <h4 class="card-title">GitHub Organization</h4>
@@ -440,7 +445,7 @@
                 <span class="section-badge">Admin Only</span>
             </div>
             <div class="admin-grid">
-                <a href="http://jenkins-prod.cit.regionals.miamioh.edu:8080" target="_blank">
+                <a href="http://jenkins-prod.cit.regionals.miamioh.edu:8080" target="_blank" rel="noopener noreferrer">
                     <div class="admin-card">
                         <div class="admin-icon">🔧</div>
                         <h4 class="admin-title">Jenkins Production</h4>
@@ -448,7 +453,7 @@
                     </div>
                 </a>
 
-                <a href="http://rancher-prod.cit.regionals.miamioh.edu" target="_blank">
+                <a href="http://rancher-prod.cit.regionals.miamioh.edu" target="_blank" rel="noopener noreferrer">
                     <div class="admin-card">
                         <div class="admin-icon">☸️</div>
                         <h4 class="admin-title">Rancher Production</h4>
@@ -456,14 +461,15 @@
                     </div>
                 </a>
 
-                  <a href="http://proxmox.cit.regionals.miamioh.edu:8006/" target="_blank">
+                  <a href="http://proxmox.cit.regionals.miamioh.edu:8006/" target="_blank" rel="noopener noreferrer">
                     <div class="admin-card">
                         <div class="admin-icon">⚙️</div>
                         <h4 class="admin-title">Proxmox Server</h4>
                         <span class="admin-badge">Admin Access</span>
                     </div>
+                </a>
 
-                <a href="https://vcenter.regional.miamioh.edu/ui/app/datacenter" target="_blank">
+                <a href="https://vcenter.regional.miamioh.edu/ui/app/datacenter" target="_blank" rel="noopener noreferrer">
                     <div class="admin-card">
                         <div class="admin-icon">⚙️</div>
                         <h4 class="admin-title">Prod vCenter</h4>
@@ -471,7 +477,7 @@
                     </div>
                 </a>
 
-                <a href="https://trello.com/u/anthonyrose8/boards" target="_blank">
+                <a href="https://trello.com/u/anthonyrose8/boards" target="_blank" rel="noopener noreferrer">
                     <div class="admin-card">
                         <div class="admin-icon">📋</div>
                         <h4 class="admin-title">Server Admin Trello</h4>

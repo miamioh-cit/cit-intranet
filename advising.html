@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="color-scheme" content="light dark">
+    <script src="theme.js"></script>
+    <script src="portal.js" defer></script>
     <style>
         :root {
             --miami-red: #C3142D;
@@ -311,20 +314,22 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="header-content">
             <div class="logo-section">
-                <div class="logo">M</div>
+                <img class="logo" src="images/miami-polytechnic.png" alt="Miami University Polytechnic" width="256" height="285">
                 <div>
-                    <h1>CIT Academic Advising</h1>
-                    <div class="subtitle">Miami University Regionals</div>
+                    <h1>Miami University Polytechnic</h1>
+                    <div class="subtitle">cet-intranet</div>
                 </div>
             </div>
             <div class="header-links">
+                <label class="theme-picker" hidden><span>Theme</span><select aria-label="Theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
                 <a href="index.html" class="header-link">← Back to Portal</a>
-                <a href="https://github.com/miamioh-cit" target="_blank" class="header-link">GitHub</a>
+                <a href="https://github.com/miamioh-cit" target="_blank" rel="noopener noreferrer" class="header-link">GitHub</a>
             </div>
         </div>
     </header>
@@ -337,7 +342,7 @@
 
         <h3 class="section-title">Academic Planning Tools</h3>
         <div class="card-grid">
-            <a href="https://miamioh.edu/regionals/departments/computer-and-information-technology/" target="_blank">
+            <a href="https://miamioh.edu/regionals/departments/computer-and-information-technology/" target="_blank" rel="noopener noreferrer">
                 <div class="card">
                     <div class="card-icon red">ℹ️</div>
                     <h4 class="card-title">About CIT Department</h4>
@@ -346,7 +351,7 @@
                 </div>
             </a>
 
-            <a href="https://uachieve.miamioh.edu/selfservice/audit/create.html" target="_blank">
+            <a href="https://uachieve.miamioh.edu/selfservice/audit/create.html" target="_blank" rel="noopener noreferrer">
                 <div class="card">
                     <div class="card-icon blue">📊</div>
                     <h4 class="card-title">UAchieve Degree Audit</h4>
@@ -355,7 +360,7 @@
                 </div>
             </a>
 
-            <a href="https://www.apps.miamioh.edu/courselist/" target="_blank">
+            <a href="https://www.apps.miamioh.edu/courselist/" target="_blank" rel="noopener noreferrer">
                 <div class="card">
                     <div class="card-icon purple">📚</div>
                     <h4 class="card-title">CIT Course List</h4>
@@ -364,7 +369,7 @@
                 </div>
             </a>
 
-            <a href="https://bulletin.miamioh.edu/courses-instruction/cit/" target="_blank">
+            <a href="https://bulletin.miamioh.edu/courses-instruction/cit/" target="_blank" rel="noopener noreferrer">
                 <div class="card">
                     <div class="card-icon red">📖</div>
                     <h4 class="card-title">Courses & Instruction</h4>
