@@ -3,7 +3,7 @@
 header { background: var(--bg-card); border-bottom-color: var(--miami-red); box-shadow: 0 2px 0 var(--polytechnic-blue); }
 .header-content { gap: 1rem; }
 .logo-section { gap: .875rem; }
-.logo { width: 64px; height: 72px; object-fit: contain; flex-shrink: 0; background: white; border-radius: 0; box-shadow: none; }
+.logo { width: 64px; height: 72px; object-fit: contain; flex-shrink: 0; background: transparent; border-radius: 0; box-shadow: none; }
 [hidden] { display: none !important; }
 .page-title { background: none; -webkit-text-fill-color: currentColor; color: var(--polytechnic-blue); }
 .section-title { color: var(--polytechnic-blue); }
