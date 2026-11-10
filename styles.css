@@ -60,3 +60,12 @@ header h1 { font-size: 1.25rem; font-weight: 650; line-height: 1.3; color: var(-
 header .subtitle { font-size: .8125rem; margin-top: .2rem; }
 .logo-section { min-width: 0; }
 @media (max-width: 440px) { header h1 { font-size: 1rem; } }
+
+/* Eight main resources: two rows of four on desktop. */
+.portal-tools { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 1fr; }
+.portal-tools .card { display: flex; flex-direction: column; min-height: 185px; }
+.portal-tools .card-icon { flex-shrink: 0; }
+.portal-tools .card-description { flex: 1; }
+.portal-tools .card-link { align-self: flex-start; }
+@media (max-width: 1100px) { .portal-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .portal-tools { grid-template-columns: 1fr; } }
