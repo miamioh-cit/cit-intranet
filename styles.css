@@ -1,4 +1,4 @@
-/* Keep the original portal layout and colorful icons; add Polytechnic branding. */
+/* Preserve the portal layout with Polytechnic branding. */
 :root { color-scheme: light; --polytechnic-blue: #051f55; }
 header { background: var(--bg-card); border-bottom-color: var(--miami-red); box-shadow: 0 2px 0 var(--polytechnic-blue); }
 .header-content { gap: 1rem; }
@@ -30,12 +30,27 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent-blue); o
 :root[data-theme="dark"] header { border-bottom-color: #e3294c; box-shadow: 0 2px 0 #467bc8; }
 :root[data-theme="dark"] .hero { background: linear-gradient(135deg, #14213a, #1c2340); }
 :root[data-theme="dark"] .hero-title { background: linear-gradient(135deg, #a9caff, #ff8299); -webkit-background-clip: text; background-clip: text; }
-/* Complementary hues for night mode; preserve the original icon artwork. */
-:root[data-theme="dark"] .card-icon.red { background: linear-gradient(135deg, #71e5e0, #3bbfc9); color: #082a37; }
-:root[data-theme="dark"] .card-icon.orange { background: linear-gradient(135deg, #94b4ff, #6f8ee8); color: #102344; }
-:root[data-theme="dark"] .card-icon.green { background: linear-gradient(135deg, #f3a3cf, #dc7db6); color: #39142c; }
-:root[data-theme="dark"] .card-icon.blue { background: linear-gradient(135deg, #ffd395, #edb66b); color: #38240c; }
-:root[data-theme="dark"] .card-icon.purple, :root[data-theme="dark"] .admin-icon { background: linear-gradient(135deg, #d4ec9b, #aed27b); color: #253710; }
+/* Student resources use blue; infrastructure administration uses red. */
+.card-icon.red, .card-icon.orange, .card-icon.green, .card-icon.blue, .card-icon.purple {
+    background: linear-gradient(135deg, #2463bb, #051f55);
+    color: #ffffff;
+}
+.admin-icon {
+    background: linear-gradient(135deg, #c8102e, #991026);
+    color: #ffffff;
+}
+:root[data-theme="dark"] .card-icon.red,
+:root[data-theme="dark"] .card-icon.orange,
+:root[data-theme="dark"] .card-icon.green,
+:root[data-theme="dark"] .card-icon.blue,
+:root[data-theme="dark"] .card-icon.purple {
+    background: linear-gradient(135deg, #94baff, #6597ed);
+    color: #051f55;
+}
+:root[data-theme="dark"] .admin-icon {
+    background: linear-gradient(135deg, #b71835, #8e1029);
+    color: #ffffff;
+}
 :root[data-theme="dark"] .admin-badge { background: #213451; border-color: #59678c; }
 :root[data-theme="dark"] .section-badge { background: #382236; border-color: #7d3f57; }
 @media (max-width: 768px) { .header-content { padding-left: 1rem; padding-right: 1rem; } .theme-picker { flex-shrink: 0; } .header-links .theme-picker { margin-left: 0; } }
